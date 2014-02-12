@@ -1,0 +1,61 @@
+@import 'css/mixins.scss';
+
+/**
+ * @require 'blocks/whitelabel/partners/<%= whitelabelName %>/<%= whitelabelName %>.scss'
+ */
+
+$colorMain: <%= whitelabelMainColor %>;
+$colorSub: <%= whitelabelSubColor %>;
+
+html,
+table.b-voucher_no-print td {
+  background-color: #fff;
+}
+
+table.b-voucher_no-print {
+  width: 600px;
+}
+
+.order_complete .button b,
+.order_complete .button {
+  @include linear-gradient(top, ($colorSub, darken($colorSub, 10%)));
+  box-shadow: none;
+}
+
+.button.small {
+  i {
+    font-weight: bold;
+  }
+  &:hover {
+    box-shadow: none;
+    background: none;
+  }
+  &:active i {
+    line-height: 26px;
+  }
+}
+
+.b-order-share-single__link,
+.b-order-share__blank-hotel-link {
+  border-bottom-color: $colorMain;
+}
+
+.b-order-share-social {
+  bottom: 15px;
+}
+
+input[type="text"] {
+  box-shadow: none;
+}
+
+.b-order-share-single__confirm-pdf,
+.b-order-share-single__links-item {
+  display: none;
+}
+
+@media print {
+  .customheader,
+  .customfooter {
+    display: none;
+  }
+}

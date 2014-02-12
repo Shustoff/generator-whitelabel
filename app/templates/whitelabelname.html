@@ -1,0 +1,33 @@
+{% extends 'blocks/whitelabel/whitelabel.html' %}
+{% load ok_i18n utils static debug media experiments experiments_panel currency_tags utils_maps djabe %}{% get_current_language as language %}<!DOCTYPE html>
+
+{% block icon %}
+  <link rel="shortcut icon" href="{% media_url 'img/whitelabel/<%= whitelabelName %>/favicon.ico' %}" type="image/x-icon">
+  <link rel="icon" href="{% media_url 'img/whitelabel/<%= whitelabelName %>/favicon.ico' %}" type="image/x-icon">
+{% endblock %}
+
+{% block title %}{{ white_label_partner }}{% endblock %}
+
+{% block extraoptions %}
+  'owl_partner': '{{ white_label_partner }}',
+  'owl_popular_destinations': {% include "blocks/whitelabel/popular_destinations.html" %},
+  'owl_popular_destinations_limit': <%= whitelabelPopularDestinationsLimit %>,
+  'owl_welcome_title': '<%= whitelabelTitle %>',
+  'owl_header_ostrovok': <%= whitelabelHeadOta %>,
+  'owl_footer_ostrovok': <%= whitelabelFootOta %>,
+  'owl_show_extra_field': false,
+  'owl_serp_customize': false,
+  'owl_show_banners': <%= whitelabelShowBanners %>,
+  'owl_show_chat': <%= whitelabelShowChat %>,
+  'owl_phone': '',
+  'owl_link': '',
+  'owl_link_text': '',
+{% endblock %}
+
+{% block content-header %}
+  {% include "blocks/whitelabel/partners/<%= whitelabelName %>/header.html" %}
+{% endblock %}
+
+{% block content-footer %}
+  {% include "blocks/whitelabel/partners/<%= whitelabelName %>/footer.html" %}
+{% endblock %}

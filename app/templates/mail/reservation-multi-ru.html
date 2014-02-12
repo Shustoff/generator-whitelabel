@@ -1,0 +1,18 @@
+{% extends "blocks/whitelabel/mail/reservation-multi-ru.html" %}
+{% load media %}
+
+{% block telephone %}
+<td valign="top" align="right" style="line-height: 20px; font-size: 14px;">
+{% if reservation.hotel.phone %}
+    <span style="font-size: 11px;">Телефон отеля:</span> {{ reservation.hotel.phone|replace:"/,/<br>"|safe }}<br>
+{% endif %}
+    <span style="font-size: 11px;">Телефон <%= whitelabelDomain %>:</span> <%= whitelabelSupportPhone %>
+</td>
+{% endblock %}
+
+{% block contact_us %}
+    <p style="font-weight: bold; margin-top: 10px; font-size: 11px;">
+      Для отмены бронирования свяжитесь со службой поддержки компании <%= whitelabelDomain %> по телефону: <%= whitelabelSupportPhone %> или по почте
+      <a href="mailto:<%= whitelabelSupportEmail %>"><%= whitelabelSupportEmail %></a>.
+    </p>
+{% endblock %}

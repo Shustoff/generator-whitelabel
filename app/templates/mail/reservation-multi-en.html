@@ -1,0 +1,18 @@
+{% extends "blocks/whitelabel/mail/reservation-multi-en.html" %}
+{% load media %}
+
+{% block telephone %}
+<td valign="top" align="right" style="line-height: 20px; font-size: 14px;">
+{% if reservation.hotel.phone %}
+    <span style="font-size: 11px;">Hotel phone:</span> {{ reservation.hotel.phone|replace:"/,/<br>"|safe }}<br>
+{% endif %}
+    <span style="font-size: 11px;">Call to <%= whitelabelDomain %>:</span> <%= whitelabelSupportPhone %>
+</td>
+{% endblock %}
+
+{% block contact_us %}
+    <p style="font-weight: bold; margin-top: 10px; font-size: 11px;">
+        Would you like to cancel a booking, please call our User Support Team: <%= whitelabelSupportPhone %> or contact us via e-mail at
+        <a href="mailto:<%= whitelabelSupportEmail %>"><%= whitelabelSupportEmail %></a>.
+    </p>
+{% endblock %}

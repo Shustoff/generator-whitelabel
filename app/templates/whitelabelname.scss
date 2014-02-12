@@ -1,0 +1,227 @@
+@import 'css/mixins.scss';
+
+/**
+ * @require 'singlepage/scss/owl/populardestinations.scss'
+ * @require 'blocks/whitelabel/partners/<%= whitelabelName %>/header.scss'
+ * @require 'blocks/whitelabel/partners/<%= whitelabelName %>/footer.scss'
+ */
+
+// Variables
+$colorMain: <%= whitelabelMainColor %>;
+$colorSub: <%= whitelabelSubColor %>;
+
+// Gif Loader
+.bookingloading {
+  &:before {
+    background: url('/img/spinners/ajax-loader.gif') no-repeat;
+    height: 31px;
+    width: 31px;
+  }
+}
+
+// Custom Whitelabels Colors
+.searchform-form {
+  background: $colorMain;
+  color: #fff;
+
+  .button.searchform-submit {
+    background: $colorSub;
+    text-shadow: none;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+  }
+
+  .nodatesbutton {
+    border-color: darken($colorMain, 10%);
+  }
+}
+
+.sortbutton,
+.hotelcard-link .hotelcard-title,
+.hotelcard-text-link,
+.hotelcard-location,
+.hotel-tabs-button,
+.hotel-header-address,
+.hotel-change-dates,
+.hotel-room-desc-link,
+.hotel-similar-price-value,
+.booking-guests-toggle,
+.booking-room-wishes-toggle,
+.booking-price-room-taxes,
+.formfieldeula-agreement,
+.formfieldeula-privacy,
+.booking-tabs-button,
+.b-order-share-single__link,
+.b-order-share-single__link:hover,
+.b-order-share__blank-hotel-link,
+.b-order-share__blank-hotel-link:hover,
+.b-order-complete__title,
+.hotelcard-link:visited,
+.b-order-complete__title,
+.b-order-share-single__link-in,
+.booking-tabs-button,
+.tworowgallery-button-left-icon,
+.tworowgallery-button-right-icon,
+.hotel-reviews-brief-read-all,
+.hotel-similar-title,
+.hotel-similar-location,
+.booking-hotel-link,
+.booking-auth-social .social-auth,
+.serpfilter-price .serpfilter-title-nights,
+.serphotel-name-link,
+.serphotel-name-link:visited,
+.hotel-rooms-not-found-choice-button,
+.hotel-rooms-not-found-choice:before,
+.hotel-room-rate-dateless-proceed-desc,
+.booking-backlink-link,
+.hotelcard-link:visited .hotelcard-title,
+.serpfilter-price .serpfilter-title-nights,
+.owl-populardestinations,
+.owl-populardestinations-destination-name,
+.searchform-title,
+.hotel-about-sorrymessage-link {
+  color: $colorMain;
+}
+
+.searchform-form,
+.serpheader,
+.sortbutton-checked,
+.urgencypopups-popup,
+.serpfilter-slider .goog-slider-rangehighlight,
+.serpfilter-slider .goog-twothumbslider-rangehighlight,
+.hotelsearchinfo-container,
+.hotel-room-rate-multibookingcontrol,
+.hotel-room-rate-multibookingcontrol-item-selected,
+.hotel-room-rate-multibookingcontrol-item-content:hover,
+.hotel-rating-param-indicator,
+.map-with-mapruler .mapruler,
+.hotel-multibookingsubmit {
+  background: $colorMain;
+}
+
+.serpsizebutton,
+.serphotel-button {
+  background: $colorSub;
+}
+
+.serpsizebutton:after {
+  border-right-color: $colorSub;
+  border-left-color: $colorSub;
+}
+
+.sortbutton-checked,
+.booking-paypage-grats-title,
+.hotelsearchinfo-comment,
+.searchform-form {
+  color: #fff;
+}
+
+.booking-tabs-button-checked {
+  color: #000;
+}
+
+.hotelsearchinfo-link {
+  color: rgba(255, 255, 255, .5);
+}
+
+.hotel-room-rate-multibookingcontrol,
+.hotel-similar:hover,
+.hotel-room:hover,
+.button-blue:active,
+.button i,
+.button:hover i,
+.button:active i,
+.hotel-rooms-not-found-choice-button {
+  border-color: $colorMain;
+}
+
+.button-blue {
+  border-color: $colorSub;
+}
+
+.hotel-similar:hover {
+  box-shadow: 0 0 5px rgba($colorMain, .4);
+}
+
+.serpheader-search-button,
+.button-flat {
+  background: $colorSub;
+
+  &.goog-control-focused,
+  &.goog-control-hover {
+    background: $colorSub;
+  }
+}
+
+.button-flat {
+  border: none;
+}
+
+.sortbutton-content,
+.hotel-tabs-button-content,
+.hotel-header-address,
+.hotel-change-dates,
+.hotel-room-desc-link,
+.booking-guests-toggle,
+.booking-room-wishes-toggle,
+.booking-price-room-taxes,
+.booking-tabs-button span,
+.b-order-share-single__link,
+.b-order-share__blank-hotel-link,
+.booking-backlink-link,
+.hotel-about-sorrymessage-link,
+.hotel-reviews-brief-read-all {
+  border-bottom: 1px solid $colorMain;
+}
+
+.hotel-tabs-button-checked {
+  border-top-color: $colorMain;
+}
+
+.serptabbutton-content {
+  border-bottom-color: #fff;
+}
+
+// Buttons
+.button-blue,
+.button-blue:hover,
+.button i,
+.button:hover i {
+  box-shadow: none;
+  background: $colorSub;
+}
+
+.button:active i,
+.button-blue:active {
+  box-shadow: none;
+  background: $colorMain;
+}
+
+// Show - Hide ruler on map
+.mapruler {
+  background: $colorSub;
+  background: rgba($colorSub, .7);
+
+  &:hover {
+    background: $colorSub;
+    background: rgba($colorSub, .7);
+  }
+}
+
+.map-with-mapruler .mapruler,
+.hotel-multibookingsubmit {
+  background: rgba($colorMain, .7);
+
+  &:hover {
+    background: rgba($colorMain, .7);
+  }
+}
+
+// Banners
+.owl-banners {
+  position: absolute;
+  width: 360px;
+  right: 0;
+  top: 50px;
+}

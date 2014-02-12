@@ -1,0 +1,8 @@
+{
+  "name": "generator-whitelabel",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A generator whitelabels for Ostrovok.ru",
+  "main": "index.js",
+  "author": "Dmitriy Shustov"
+}

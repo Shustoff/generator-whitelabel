@@ -1,0 +1,14 @@
+{% extends 'blocks/whitelabel/order.complete.html' %}
+{% load media %}
+
+{% block icon %}
+  <link rel="shortcut icon" href="{% media_url 'img/whitelabel/<%= whitelabelName %>/favicon.ico' %}" type="image/x-icon">
+{% endblock %}
+
+{% block page_header %}
+  {% include "blocks/whitelabel/partners/<%= whitelabelName %>/header.html" %}
+{% endblock %}
+
+{% block page_footer %}
+  {% include "blocks/whitelabel/partners/<%= whitelabelName %>/footer.html" %}
+{% endblock %}
