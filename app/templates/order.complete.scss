@@ -16,10 +16,12 @@ table.b-voucher_no-print {
   width: 600px;
 }
 
-.order_complete .button b,
-.order_complete .button {
-  @include linear-gradient(top, ($colorSub, darken($colorSub, 10%)));
-  box-shadow: none;
+.order_complete {
+  .button b,
+  .button {
+    @include linear-gradient(top, ($colorMain, darken($colorMain, 10%)));
+    box-shadow: none;
+  }
 }
 
 .button.small {
@@ -33,6 +35,15 @@ table.b-voucher_no-print {
   &:active i {
     line-height: 26px;
   }
+}
+
+.b-order-share-single__link,
+.b-order-share-single__link:hover,
+.b-order-share__blank-hotel-link,
+.b-order-share__blank-hotel-link:hover,
+.b-order-complete__title,
+.b-order-share-single__link-in, {
+  color: $colorMain;
 }
 
 .b-order-share-single__link,

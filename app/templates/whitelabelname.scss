@@ -19,10 +19,14 @@ $colorSub: <%= whitelabelSubColor %>;
   }
 }
 
-// Custom Whitelabels Colors
+// Searchform
 .searchform-form {
   background: $colorMain;
   color: #fff;
+
+  .searchform-title {
+    color: $colorMain;
+  }
 
   .button.searchform-submit {
     background: $colorSub;
@@ -37,6 +41,7 @@ $colorSub: <%= whitelabelSubColor %>;
   }
 }
 
+// Custom Whitelabels Colors
 .sortbutton,
 .hotelcard-link .hotelcard-title,
 .hotelcard-text-link,
@@ -52,14 +57,7 @@ $colorSub: <%= whitelabelSubColor %>;
 .formfieldeula-agreement,
 .formfieldeula-privacy,
 .booking-tabs-button,
-.b-order-share-single__link,
-.b-order-share-single__link:hover,
-.b-order-share__blank-hotel-link,
-.b-order-share__blank-hotel-link:hover,
-.b-order-complete__title,
 .hotelcard-link:visited,
-.b-order-complete__title,
-.b-order-share-single__link-in,
 .booking-tabs-button,
 .tworowgallery-button-left-icon,
 .tworowgallery-button-right-icon,
@@ -79,12 +77,11 @@ $colorSub: <%= whitelabelSubColor %>;
 .serpfilter-price .serpfilter-title-nights,
 .owl-populardestinations,
 .owl-populardestinations-destination-name,
-.searchform-title,
-.hotel-about-sorrymessage-link {
+.hotel-about-sorrymessage-link,
+.body-hotel .serptabbutton  {
   color: $colorMain;
 }
 
-.searchform-form,
 .serpheader,
 .sortbutton-checked,
 .urgencypopups-popup,
@@ -96,24 +93,36 @@ $colorSub: <%= whitelabelSubColor %>;
 .hotel-room-rate-multibookingcontrol-item-content:hover,
 .hotel-rating-param-indicator,
 .map-with-mapruler .mapruler,
-.hotel-multibookingsubmit {
+.hotel-multibookingsubmit,
+.headerregion:hover .headerregion-inner,
+.header-select,
+.body-serp .owl-header-inner {
   background: $colorMain;
 }
 
 .serpsizebutton,
-.serphotel-button {
+.serphotel-button,
+.headersearch {
   background: $colorSub;
 }
 
-.serpsizebutton:after {
-  border-right-color: $colorSub;
-  border-left-color: $colorSub;
+.body-hotel {
+  .headerregion:hover .headerregion-inner {
+    background: #fff;
+  }
+}
+
+.serpsizebutton{
+  &:after {
+    border-right-color: $colorSub;
+    border-left-color: $colorSub;
+  }
 }
 
 .sortbutton-checked,
 .booking-paypage-grats-title,
 .hotelsearchinfo-comment,
-.searchform-form {
+.body-serp .headerregion {
   color: #fff;
 }
 
@@ -128,34 +137,21 @@ $colorSub: <%= whitelabelSubColor %>;
 .hotel-room-rate-multibookingcontrol,
 .hotel-similar:hover,
 .hotel-room:hover,
-.button-blue:active,
-.button i,
-.button:hover i,
-.button:active i,
 .hotel-rooms-not-found-choice-button {
   border-color: $colorMain;
-}
-
-.button-blue {
-  border-color: $colorSub;
 }
 
 .hotel-similar:hover {
   box-shadow: 0 0 5px rgba($colorMain, .4);
 }
 
-.serpheader-search-button,
-.button-flat {
+.serpheader-search-button {
   background: $colorSub;
 
   &.goog-control-focused,
   &.goog-control-hover {
     background: $colorSub;
   }
-}
-
-.button-flat {
-  border: none;
 }
 
 .sortbutton-content,
@@ -167,8 +163,6 @@ $colorSub: <%= whitelabelSubColor %>;
 .booking-room-wishes-toggle,
 .booking-price-room-taxes,
 .booking-tabs-button span,
-.b-order-share-single__link,
-.b-order-share__blank-hotel-link,
 .booking-backlink-link,
 .hotel-about-sorrymessage-link,
 .hotel-reviews-brief-read-all {
@@ -180,25 +174,32 @@ $colorSub: <%= whitelabelSubColor %>;
 }
 
 .serptabbutton-content {
-  border-bottom-color: #fff;
+  border-bottom-color: $colorMain;
 }
 
 // Buttons
+.button-flat {
+  border: none;
+  background: $colorSub;
+
+  &.goog-control-focused,
+  &.goog-control-hover {
+    background: $colorSub;
+  }
+}
+
 .button-blue,
+.button-blue:active,
 .button-blue:hover,
 .button i,
-.button:hover i {
+.button:hover i,
+.button:active i {
   box-shadow: none;
   background: $colorSub;
+  border: $colorSub;
 }
 
-.button:active i,
-.button-blue:active {
-  box-shadow: none;
-  background: $colorMain;
-}
-
-// Show - Hide ruler on map
+// Ruler on Google map
 .mapruler {
   background: $colorSub;
   background: rgba($colorSub, .7);

@@ -1,3 +1,47 @@
 .customheader {
 
 }
+
+.body-serp,
+.body-hotel {
+  .owl-header-inner {
+    position: relative;
+    margin: 0 auto;
+    height: 60px;
+
+    .headersearch {
+      top: 17px;
+      bottom: inherit;
+    }
+
+    .headertabs {
+      top: 26px;
+      left: 227px;
+      bottom: inherit;
+    }
+
+    .headerregion {
+      top: -5px;
+      left: 580px;
+    }
+  }
+}
+
+.body-hotel {
+  .owl-header-inner {
+    background: none;
+    width: 960px;
+
+    .headersearch {
+      top: 23px;
+    }
+
+    .headertabs {
+      top: 20px;
+    }
+
+    .headerregion {
+      top: 5px;
+    }
+  }
+}

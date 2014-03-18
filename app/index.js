@@ -63,6 +63,10 @@ WhitelabelGenerator.prototype.askFor = function askFor() {
     {
       name: 'whitelabelShowChat',
       message: 'Показывать чат (y/n)'
+    },
+    {
+      name: 'whitelabelShowAccountBlock',
+      message: 'Показывать блок аккаунта (y/n)'
     }
   ];
 
@@ -79,6 +83,7 @@ WhitelabelGenerator.prototype.askFor = function askFor() {
     this.whitelabelFootOta = props.whitelabelFootOta === 'y' ? true : false;
     this.whitelabelShowBanners = props.whitelabelShowBanners === 'y' ? true : false;
     this.whitelabelShowChat = props.whitelabelShowChat === 'y' ? true : false;
+    this.whitelabelShowAccountBlock = props.whitelabelShowAccountBlock === 'y' ? true : false;
     cb();
   }.bind(this));
 };
